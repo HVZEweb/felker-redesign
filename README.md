@@ -32,4 +32,3 @@ Then visit `http://localhost:3000`.
 - Form submissions are **not sent** — demo toast only
 - Demo ribbon clarifies non-affiliation with Felker Brothers Corp.
 - `robots.txt` blocks indexing to avoid SEO confusion with the real Felker site
-- Push to `main` deploys via GitHub Actions (secrets configured in the repo settings)

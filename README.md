@@ -21,7 +21,9 @@ Standalone pitch demo for [Felker Brothers Corporation](https://www.felkerbrothe
 | **GitHub** | https://github.com/HVZEweb/felker-redesign |
 | **Netlify admin** | https://app.netlify.com/projects/felker-redesign |
 
-Auto-deploy: push to `main` on GitHub → Netlify rebuilds.
+Auto-deploy: push to `main` → **GitHub Actions** deploys to Netlify (see `.github/workflows/deploy.yml`).
+
+> If Netlify shows `Host key verification failed` on git clone — the repo was linked without the Netlify GitHub App. Builds are handled by GitHub Actions instead; Netlify git auto-build is disabled (`stop_builds: true`).
 
 ## Local preview
 

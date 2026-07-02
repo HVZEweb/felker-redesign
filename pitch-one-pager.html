@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Website Redesign Proposal — Felker Brothers | HVZEweb</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #0f172a;
+            --muted: #64748b;
+            --accent: #ea580c;
+            --bg: #fff;
+            --line: #e2e8f0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: var(--ink);
+            background: #f1f5f9;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 24px auto;
+            padding: 16mm 18mm;
+            background: var(--bg);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 14px;
+            border-bottom: 3px solid var(--accent);
+            margin-bottom: 18px;
+        }
+
+        .brand {
+            font-size: 22pt;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .brand span { color: var(--accent); }
+
+        .meta {
+            text-align: right;
+            font-size: 9pt;
+            color: var(--muted);
+        }
+
+        h1 {
+            font-size: 20pt;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 12pt;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+        .box {
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 14px;
+        }
+
+        .box h2 {
+            font-size: 10pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 8px;
+        }
+
+        .box.before h2 { color: #dc2626; }
+        .box.after h2 { color: #16a34a; }
+
+        .box ul {
+            padding-left: 16px;
+            font-size: 10pt;
+        }
+
+        .box li { margin-bottom: 4px; }
+
+        .preview {
+            height: 72px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .preview.old {
+            background: linear-gradient(180deg, #1e3a5f, #0a1628);
+            border: 1px solid #334155;
+            position: relative;
+        }
+
+        .preview.old::after {
+            content: 'HTTP · table layout · PDF-only catalog';
+            position: absolute;
+            bottom: 6px;
+            left: 8px;
+            font-size: 7pt;
+            color: #94a3b8;
+        }
+
+        .preview.new {
+            background: linear-gradient(135deg, #081422, #162a45);
+            border-left: 4px solid var(--accent);
+            position: relative;
+        }
+
+        .preview.new::after {
+            content: 'HTTPS · mobile-first · clear product paths';
+            position: absolute;
+            bottom: 6px;
+            left: 10px;
+            font-size: 7pt;
+            color: #94a3b8;
+        }
+
+        section { margin-bottom: 18px; }
+
+        section > h2 {
+            font-size: 11pt;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--ink);
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .benefit {
+            padding: 12px;
+            background: #f8fafc;
+            border-radius: 6px;
+            border-top: 3px solid var(--accent);
+        }
+
+        .benefit strong {
+            display: block;
+            font-size: 10pt;
+            margin-bottom: 4px;
+        }
+
+        .benefit p {
+            font-size: 9pt;
+            color: var(--muted);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 9.5pt;
+        }
+
+        th, td {
+            padding: 8px 10px;
+            text-align: left;
+            border: 1px solid var(--line);
+        }
+
+        th {
+            background: #f8fafc;
+            font-weight: 600;
+        }
+
+        .cta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            background: var(--ink);
+            color: #fff;
+            border-radius: 6px;
+        }
+
+        .cta strong { font-size: 12pt; display: block; }
+        .cta span { font-size: 9pt; opacity: 0.85; }
+
+        .cta_links {
+            text-align: right;
+            font-size: 10pt;
+        }
+
+        .cta_links a { color: #fdba74; }
+
+        .footnote {
+            margin-top: 14px;
+            font-size: 8pt;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        .toolbar {
+            width: 210mm;
+            margin: 16px auto 0;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .toolbar button,
+        .toolbar a {
+            padding: 10px 18px;
+            font: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .toolbar button { background: var(--accent); color: #fff; }
+        .toolbar a { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+
+        @media print {
+            body { background: #fff; }
+            .page { margin: 0; box-shadow: none; width: auto; min-height: auto; }
+            .toolbar { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="toolbar">
+        <button type="button" onclick="window.print()">Save as PDF (Print)</button>
+        <a href="index.html">Open live concept demo →</a>
+    </div>
+
+    <article class="page">
+        <header class="header">
+            <div class="brand">HVZE<span>web</span></div>
+            <div class="meta">
+                Website redesign proposal<br>
+                Prepared for Felker Brothers Corp.<br>
+                June 2026 · Concept demo included
+            </div>
+        </header>
+
+        <h1>Your website should match the quality of your stainless products</h1>
+        <p class="subtitle">A focused Phase 1 redesign to modernize Felker Brothers' digital presence — without changing who you are.</p>
+
+        <div class="grid-2">
+            <div class="box before">
+                <h2>Today</h2>
+                <div class="preview old" aria-hidden="true"></div>
+                <ul>
+                    <li>HTTP, dated layout and navigation</li>
+                    <li>Product info buried in PDFs (2006 catalog still linked)</li>
+                    <li>Weak mobile experience for buyers on-site</li>
+                    <li>Hard to find quote path for new RFQs</li>
+                </ul>
+            </div>
+            <div class="box after">
+                <h2>Proposed (concept built)</h2>
+                <div class="preview new" aria-hidden="true"></div>
+                <ul>
+                    <li>HTTPS, clean industrial brand, mobile-first</li>
+                    <li>Product hub with clear paths + PDF downloads kept</li>
+                    <li>Prominent quote CTA and division structure</li>
+                    <li>Pipeline Portal preserved for existing customers</li>
+                </ul>
+            </div>
+        </div>
+
+        <section>
+            <h2>What you gain</h2>
+            <div class="benefits">
+                <div class="benefit">
+                    <strong>More qualified RFQs</strong>
+                    <p>Clear product categories and a simple quote form reduce friction for engineers and purchasing.</p>
+                </div>
+                <div class="benefit">
+                    <strong>Trust at first click</strong>
+                    <p>Modern design signals the same reliability as ISO 9001 — especially for first-time international buyers.</p>
+                </div>
+                <div class="benefit">
+                    <strong>Low-risk rollout</strong>
+                    <p>Phase 1 covers homepage, products hub and contact — no ERP or portal rebuild required.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Suggested Phase 1 scope &amp; investment</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Deliverable</th>
+                        <th>Includes</th>
+                        <th>Timeline</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Homepage</strong></td>
+                        <td>Hero, divisions, certifications, portal link</td>
+                        <td>Week 1–2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Products hub</strong></td>
+                        <td>Piping + fabrication categories, PDF links, RFQ paths</td>
+                        <td>Week 2–3</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contact / quote</strong></td>
+                        <td>Form → email/CRM, locations, click-to-call</td>
+                        <td>Week 3</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Launch</strong></td>
+                        <td>HTTPS, analytics, basic SEO, Netlify/hosting setup</td>
+                        <td>Week 4</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top:10px;font-size:10pt;color:var(--muted);">
+                <strong>Phase 1 estimate:</strong> $2,800 – $4,200 USD (fixed scope) · Optional Phase 2: full catalog migration, CMS, multilingual.
+            </p>
+        </section>
+
+        <section>
+            <div class="cta">
+                <div>
+                    <strong>See the concept demo we built for you</strong>
+                    <span>No obligation — we invested time because your brand deserves a better first impression.</span>
+                </div>
+                <div class="cta_links">
+                    Demo: <a href="index.html">Open concept site</a><br>
+                    Email: hvzeweb@mail.ru<br>
+                    Telegram: @HVZEweb
+                </div>
+            </div>
+        </section>
+
+        <p class="footnote">
+            This document and demo site are an unsolicited concept proposal by HVZEweb — not affiliated with Felker Brothers Corporation.
+            All Felker product names and contact details belong to their respective owner. Demo form does not transmit data.
+        </p>
+    </article>
+</body>
+</html>

@@ -3,104 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Felker Brothers Corporation — stainless steel piping manufacturer since 1903, Wisconsin and Kentucky.">
-    <title>About | Felker Brothers Corp.</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="About Felker Brothers Corporation — stainless steel piping manufacturer since 1903.">
+    <title>About Us | Felker Bros. Corp.</title>
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/felker.css">
 </head>
-<body>
-    <header class="header">
-        <div class="container header_inner">
-            <a class="logo" href="index.html"><img src="assets/logo.svg" alt="Felker Brothers Corp." width="180" height="40"></a>
-            <a class="header_phone" href="tel:8008262304">800-826-2304</a>
-            <nav class="nav" aria-label="Main">
-                <a href="index.html">Home</a>
-                <a href="products.html">Products</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <a class="header_cta" href="contact.html">Request Quote</a>
+<body data-active-tab="news">
+    <div class="site_bg" aria-hidden="true"></div>
+
+    <header class="site_header">
+        <div class="container site_header_row">
+            <a class="site_logo" href="index.html"><img src="assets/logo.svg" alt="Felker Bros. Corp." width="260" height="42"></a>
+            <div class="site_header_right">
+                <a class="site_phone" href="tel:8008262304">800-826-2304</a>
+                <nav class="utility_nav" aria-label="Utility">
+                    <a href="index.html">Home</a><span class="utility_sep">|</span>
+                    <a href="about.html">About Us</a><span class="utility_sep">|</span>
+                    <a href="contact.html">Contact</a><span class="utility_sep">|</span>
+                    <a href="about.html#employment">Employment</a><span class="utility_sep">|</span>
+                    <a href="about.html#mission">Mission</a>
+                </nav>
+            </div>
             <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
         </div>
     </header>
     <nav class="mobile_nav" aria-label="Mobile">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html">Home</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
+        <a href="products.html">Products</a><a href="tel:8008262304">800-826-2304</a>
     </nav>
 
-    <main>
-        <div class="page_hero">
-            <div class="container">
-                <h1>About Felker Brothers</h1>
-                <p>Over a century of stainless steel piping expertise — from standard products to custom fabricated systems.</p>
-            </div>
+    <div class="hero_banner">
+        <img src="assets/felker-reference.png" alt="Felker Brothers facilities" width="980" height="200">
+    </div>
+
+    <nav class="tab_nav" aria-label="Product divisions">
+        <div class="container tab_nav_inner">
+            <button type="button" class="tab_btn" data-tab="piping" aria-selected="false">Piping Products</button>
+            <button type="button" class="tab_btn" data-tab="fabrication" aria-selected="false">Fabrication Products</button>
+            <button type="button" class="tab_btn" data-tab="service" aria-selected="false">Customer Service</button>
+            <button type="button" class="tab_btn is-active" data-tab="news" aria-selected="true">Industry News</button>
         </div>
+    </nav>
 
-        <section class="section">
-            <div class="container">
-                <p class="section_label">Our History</p>
-                <h2 class="section_title">Since 1903</h2>
-                <div class="timeline">
-                    <div class="timeline_item">
-                        <strong>1903 — Founded</strong>
-                        <p>Felker Brothers Corporation established as a family-owned manufacturer serving industrial and process industries with stainless steel piping solutions.</p>
-                    </div>
-                    <div class="timeline_item">
-                        <strong>Two divisions, one standard</strong>
-                        <p>Felker Piping Products and Felker Fabrication operate as specialized divisions — standard catalog items and custom engineered systems under one quality system.</p>
-                    </div>
-                    <div class="timeline_item">
-                        <strong>ISO 9001 quality</strong>
-                        <p>Documented quality management with material traceability supports regulated industries including food, dairy, pharmaceutical and chemical processing.</p>
-                    </div>
-                    <div class="timeline_item">
-                        <strong>Today</strong>
-                        <p>Manufacturing in Wisconsin and Kentucky with domestic distribution and international export — supporting customers who depend on corrosion-resistant process piping.</p>
-                    </div>
+    <div class="container content_layout">
+        <aside class="submenu_panel" id="submenu-panel" aria-label="Section menu"></aside>
+
+        <main class="content_main">
+            <article class="content_block">
+                <h1>About Felker Brothers Corporation</h1>
+                <p>Family-owned manufacturer of welded stainless steel pipe, tube, fittings and fabricated piping systems — serving process industries since 1903.</p>
+            </article>
+
+            <article class="content_block">
+                <h2>Our History</h2>
+                <div class="timeline_item"><strong>1903 — Founded</strong><p>Established to serve industrial and sanitary process markets with corrosion-resistant piping solutions.</p></div>
+                <div class="timeline_item"><strong>Two divisions</strong><p>Felker Piping Products and Felker Fabrication — standard catalog and custom engineered systems under one ISO 9001 quality system.</p></div>
+                <div class="timeline_item"><strong>Today</strong><p>Manufacturing in Marshfield, Wisconsin and Mayfield, Kentucky with domestic distribution and international export.</p></div>
+            </article>
+
+            <article class="content_block" id="certifications">
+                <h2>Certifications</h2>
+                <p>ISO 9001 quality management · ASTM / ASME material standards · 3A sanitary where applicable · Material traceability and MTR packages on request.</p>
+            </article>
+
+            <article class="content_block" id="mission">
+                <h2>Mission</h2>
+                <p>To be the complete combination in stainless steel piping products — delivering quality, documentation and service that process industries depend on.</p>
+            </article>
+
+            <article class="content_block" id="employment">
+                <h2>Employment</h2>
+                <p>Join our Wisconsin and Kentucky teams in welding, fabrication, quality and customer service. Inquiries: <a href="contact.html">contact us</a> or call <a href="tel:7153843121">715-384-3121</a>.</p>
+            </article>
+
+            <article class="content_block" id="events">
+                <h2>Trade Shows &amp; Events</h2>
+                <p>Meet Felker representatives at regional process industry trade shows — contact sales for the current schedule.</p>
+            </article>
+
+            <div class="location_grid">
+                <div class="location_card">
+                    <strong>Marshfield, WI (HQ)</strong><br>
+                    22 North Chestnut Avenue<br>
+                    Marshfield, WI 54449<br>
+                    <a href="tel:7153843121">715-384-3121</a>
                 </div>
-
-                <div class="locations">
-                    <article class="location_card">
-                        <h3>Marshfield, Wisconsin (HQ)</h3>
-                        <p>
-                            22 North Chestnut Avenue<br>
-                            Marshfield, WI 54449<br>
-                            Phone: <a href="tel:7153843121">715-384-3121</a><br>
-                            Toll-free: <a href="tel:8008262304">800-826-2304</a>
-                        </p>
-                    </article>
-                    <article class="location_card">
-                        <h3>Mayfield, Kentucky</h3>
-                        <p>
-                            Fabrication facility serving southern and midwestern markets with custom piping systems and spool production.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section_dark">
-            <div class="container">
-                <div class="cert_strip">
-                    <div class="cert_item"><strong>Food &amp; Dairy</strong><span>Sanitary piping</span></div>
-                    <div class="cert_item"><strong>Pharma</strong><span>Process systems</span></div>
-                    <div class="cert_item"><strong>Chemical</strong><span>Corrosion resistant</span></div>
-                    <div class="cert_item"><strong>Industrial</strong><span>Custom fabrication</span></div>
+                <div class="location_card">
+                    <strong>Mayfield, KY</strong><br>
+                    Fabrication facility serving southern and midwestern markets with custom piping systems and spool production.
                 </div>
             </div>
-        </section>
-    </main>
+        </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer_bottom">
-                <span>© Felker Brothers Corporation</span>
-                <span class="footer_demo">Concept demo by <a href="https://hvzeweb.netlify.app" target="_blank" rel="noopener">HVZEweb</a></span>
-            </div>
-        </div>
+        <aside class="portal_panel">
+            <div class="portal_header"><div class="portal_header_icon" aria-hidden="true"></div><h2>Pipeline Portal</h2></div>
+            <form class="portal_form" data-portal-form action="#" method="post">
+                <label>User Name<input type="text" name="username"></label>
+                <label>Password<input type="password" name="password"></label>
+                <button type="submit" class="btn_portal_go">GO</button>
+            </form>
+        </aside>
+    </div>
+
+    <footer class="site_footer">
+        <p class="footer_tagline">Your Complete Combination in Stainless Steel Piping Products</p>
+        <p class="footer_copy">Copyright © Felker Brothers Corporation · Concept by <a href="https://hvzeweb.netlify.app" target="_blank" rel="noopener">HVZEweb</a></p>
     </footer>
-    <div class="demo_ribbon">Concept redesign demo · <a href="pitch-one-pager.html">Pitch deck</a></div>
+    <div class="demo_ribbon">Concept demo · <a href="pitch-one-pager.html">Pitch deck</a></div>
     <script src="js/felker.js"></script>
 </body>
 </html>

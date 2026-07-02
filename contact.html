@@ -3,121 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Felker Brothers Corporation — request a quote, find locations, call 800-826-2304.">
-    <title>Contact | Felker Brothers Corp.</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Contact Felker Brothers Corporation — 800-826-2304, Marshfield WI.">
+    <title>Contact | Felker Bros. Corp.</title>
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/felker.css">
 </head>
-<body>
-    <header class="header">
-        <div class="container header_inner">
-            <a class="logo" href="index.html"><img src="assets/logo.svg" alt="Felker Brothers Corp." width="180" height="40"></a>
-            <a class="header_phone" href="tel:8008262304">800-826-2304</a>
-            <nav class="nav" aria-label="Main">
-                <a href="index.html">Home</a>
-                <a href="products.html">Products</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <a class="header_cta" href="contact.html">Request Quote</a>
+<body data-active-tab="service">
+    <div class="site_bg" aria-hidden="true"></div>
+
+    <header class="site_header">
+        <div class="container site_header_row">
+            <a class="site_logo" href="index.html"><img src="assets/logo.svg" alt="Felker Bros. Corp." width="260" height="42"></a>
+            <div class="site_header_right">
+                <a class="site_phone" href="tel:8008262304">800-826-2304</a>
+                <nav class="utility_nav" aria-label="Utility">
+                    <a href="index.html">Home</a><span class="utility_sep">|</span>
+                    <a href="about.html">About Us</a><span class="utility_sep">|</span>
+                    <a href="contact.html">Contact</a><span class="utility_sep">|</span>
+                    <a href="about.html#employment">Employment</a><span class="utility_sep">|</span>
+                    <a href="about.html#mission">Mission</a>
+                </nav>
+            </div>
             <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
         </div>
     </header>
     <nav class="mobile_nav" aria-label="Mobile">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html">Home</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
+        <a href="products.html">Products</a><a href="tel:8008262304">800-826-2304</a>
     </nav>
 
-    <main>
-        <div class="page_hero">
-            <div class="container">
-                <h1>Contact &amp; Quote</h1>
-                <p>Reach our sales team for product information, RFQs and technical support.</p>
-            </div>
+    <div class="hero_banner">
+        <img src="assets/felker-reference.png" alt="Contact Felker Brothers" width="980" height="200">
+    </div>
+
+    <nav class="tab_nav" aria-label="Product divisions">
+        <div class="container tab_nav_inner">
+            <button type="button" class="tab_btn" data-tab="piping" aria-selected="false">Piping Products</button>
+            <button type="button" class="tab_btn" data-tab="fabrication" aria-selected="false">Fabrication Products</button>
+            <button type="button" class="tab_btn is-active" data-tab="service" aria-selected="true">Customer Service</button>
+            <button type="button" class="tab_btn" data-tab="news" aria-selected="false">Industry News</button>
         </div>
+    </nav>
 
-        <section class="section">
-            <div class="container contact_layout">
-                <div>
-                    <p class="section_label">Get in touch</p>
-                    <h2 class="section_title">We're here to help</h2>
-                    <ul class="contact_list">
-                        <li>
-                            <span>Toll-free</span>
-                            <a href="tel:8008262304">800-826-2304</a>
-                        </li>
-                        <li>
-                            <span>Marshfield, WI</span>
-                            <a href="tel:7153843121">715-384-3121</a>
-                        </li>
-                        <li>
-                            <span>Headquarters</span>
-                            22 North Chestnut Avenue<br>
-                            Marshfield, WI 54449
-                        </li>
-                        <li>
-                            <span>Customer portal</span>
-                            <a href="https://www.felkerbrothers.com/pipeline-portal.aspx" target="_blank" rel="noopener">Pipeline Portal login →</a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="container content_layout">
+        <aside class="submenu_panel" id="submenu-panel" aria-label="Section menu"></aside>
 
+        <main class="content_main">
+            <article class="content_block" id="hours">
+                <h1>Customer Service</h1>
+                <p><strong>Monday – Friday:</strong> 7:00 AM – 4:30 PM Central</p>
+                <p>
+                    <strong>Toll-free:</strong> <a href="tel:8008262304">800-826-2304</a><br>
+                    <strong>Marshfield, WI:</strong> <a href="tel:7153843121">715-384-3121</a>
+                </p>
+                <p>22 North Chestnut Avenue, Marshfield, WI 54449</p>
+            </article>
+
+            <article class="content_block" id="quote">
+                <h2>Request a Quote</h2>
                 <form class="contact_form" data-demo-form action="#" method="post">
-                    <h3 style="font-family:var(--display);font-size:22px;color:var(--white);text-transform:uppercase;">Request a quote</h3>
-                    <div class="form_field">
-                        <label>
-                            Full name
-                            <input type="text" name="name" required autocomplete="name">
-                        </label>
-                    </div>
-                    <div class="form_field">
-                        <label>
-                            Company
-                            <input type="text" name="company" required autocomplete="organization">
-                        </label>
-                    </div>
-                    <div class="form_field">
-                        <label>
-                            Email
-                            <input type="email" name="email" required autocomplete="email">
-                        </label>
-                    </div>
-                    <div class="form_field">
-                        <label>
-                            Product interest
-                            <select name="product" required>
-                                <option value="">Select…</option>
-                                <option>Pipe &amp; Tube</option>
-                                <option>Fittings</option>
-                                <option>Custom Fabrication</option>
-                                <option>Other / Not sure</option>
-                            </select>
-                        </label>
-                    </div>
-                    <div class="form_field">
-                        <label>
-                            Project details
-                            <textarea name="message" rows="4" required placeholder="Sizes, quantities, application, timeline…"></textarea>
-                        </label>
-                    </div>
-                    <button class="btn btn_primary btn_full" type="submit">Submit Request</button>
-                    <p class="form_note">Demo form — submissions are not sent. Live site would connect to your CRM or email.</p>
+                    <label>Full name<input type="text" name="name" required></label>
+                    <label>Company<input type="text" name="company" required></label>
+                    <label>Email<input type="email" name="email" required></label>
+                    <label>Product interest
+                        <select name="product" required>
+                            <option value="">Select…</option>
+                            <option>Pipe &amp; Tube</option>
+                            <option>Fittings</option>
+                            <option>Custom Fabrication</option>
+                            <option>Other</option>
+                        </select>
+                    </label>
+                    <label>Project details<textarea name="message" rows="4" required></textarea></label>
+                    <button type="submit" class="btn_go">Submit Request</button>
+                    <p class="form_note">Demo form — not sent. Live site would route to sales email/CRM.</p>
                 </form>
-            </div>
-        </section>
-    </main>
+            </article>
+        </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer_bottom">
-                <span>© Felker Brothers Corporation</span>
-                <span class="footer_demo">Concept demo by <a href="https://hvzeweb.netlify.app" target="_blank" rel="noopener">HVZEweb</a></span>
-            </div>
-        </div>
+        <aside class="portal_panel">
+            <div class="portal_header"><div class="portal_header_icon" aria-hidden="true"></div><h2>Pipeline Portal</h2></div>
+            <form class="portal_form" data-portal-form action="#" method="post">
+                <label>User Name<input type="text" name="username"></label>
+                <label>Password<input type="password" name="password"></label>
+                <label class="portal_remember"><input type="checkbox"> Remember me</label>
+                <button type="submit" class="btn_portal_go">GO</button>
+            </form>
+            <p class="portal_links">
+                <a href="https://www.felkerbrothers.com/pipeline-portal.aspx" target="_blank" rel="noopener">Forgot Password</a>
+            </p>
+        </aside>
+    </div>
+
+    <footer class="site_footer">
+        <p class="footer_tagline">Your Complete Combination in Stainless Steel Piping Products</p>
+        <p class="footer_copy">Copyright © Felker Brothers Corporation · Concept by <a href="https://hvzeweb.netlify.app" target="_blank" rel="noopener">HVZEweb</a></p>
     </footer>
-    <div class="demo_ribbon">Concept redesign demo · <a href="pitch-one-pager.html">Pitch deck</a></div>
+    <div class="demo_ribbon">Concept demo · <a href="pitch-one-pager.html">Pitch deck</a></div>
     <script src="js/felker.js"></script>
 </body>
 </html>

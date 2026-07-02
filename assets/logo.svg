@@ -1,7 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" fill="none" aria-hidden="true">
-  <circle cx="22" cy="24" r="18" stroke="#ea580c" stroke-width="2"/>
-  <path d="M14 30V18h8c4 0 6.5 2 6.5 5s-2.5 5-6.5 5h-4v2H14zm4-6h3.5c1.8 0 2.5-.8 2.5-2s-.7-2-2.5-2H18v4z" fill="#f8fafc"/>
-  <text x="48" y="21" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#f8fafc" letter-spacing="0.12em">FELKER</text>
-  <text x="48" y="36" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#94a3b8" letter-spacing="0.18em">BROTHERS CORP.</text>
-  <rect x="48" y="40" width="80" height="2" fill="#ea580c"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 52" fill="none" aria-hidden="true">
+  <circle cx="26" cy="26" r="22" fill="url(#metal)" stroke="#8a9bb0" stroke-width="1.5"/>
+  <defs>
+    <linearGradient id="metal" x1="4" y1="4" x2="48" y2="48">
+      <stop stop-color="#eef2f7"/>
+      <stop offset="0.5" stop-color="#94a3b8"/>
+      <stop offset="1" stop-color="#475569"/>
+    </linearGradient>
+  </defs>
+  <text x="26" y="31" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="22" font-weight="900" fill="#1e4a7a">F</text>
+  <text x="58" y="22" font-family="Arial Black, Arial, sans-serif" font-size="15" font-weight="900" fill="#111827" letter-spacing="0.04em">FELKER BROS.</text>
+  <text x="58" y="38" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#111827" letter-spacing="0.14em">CORP.</text>
 </svg>

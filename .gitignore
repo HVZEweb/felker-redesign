@@ -1,2 +1,17 @@
+# Local Netlify CLI state (contains site ID — never commit)
 .netlify/
+
+# Deploy artifacts
 deploy.zip
+*.zip
+
+# Secrets & env
+.env
+.env.*
+*.pem
+*.key
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini

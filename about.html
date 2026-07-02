@@ -34,9 +34,18 @@
         <a href="tel:8008262304">800-826-2304</a>
     </nav>
 
-    <section class="hero" style="min-height:280px">
-        <div class="hero_media"><img src="assets/felker-reference.png" alt="" width="1200" height="400"></div>
-        <div class="container hero_content" style="padding:32px 0 40px">
+    <section class="hero hero--compact">
+        <div class="hero_carousel" data-hero-carousel aria-roledescription="carousel">
+            <div class="hero_slides"></div>
+            <div class="hero_overlay" aria-hidden="true"></div>
+            <p class="hero_caption" aria-live="polite"></p>
+            <div class="hero_carousel_ui">
+                <button type="button" class="hero_arrow hero_arrow--prev" aria-label="Previous slide">‹</button>
+                <div class="hero_dots"></div>
+                <button type="button" class="hero_arrow hero_arrow--next" aria-label="Next slide">›</button>
+            </div>
+        </div>
+        <div class="container hero_content">
             <h1 class="hero_title" style="font-size:clamp(28px,5vw,40px)">About Felker Brothers</h1>
             <p class="hero_text" style="margin-bottom:0">Over a century of stainless steel piping expertise — Wisconsin &amp; Kentucky.</p>
         </div>
@@ -96,6 +105,7 @@
         <p class="footer_copy">© Felker Brothers Corporation · <a href="https://hvzeweb.netlify.app" target="_blank" rel="noopener">HVZEweb</a></p>
     </footer>
     <div class="demo_ribbon">Concept demo · <a href="pitch-one-pager.html">Pitch deck</a></div>
+    <script src="js/hero-carousel.js"></script>
     <script src="js/felker.js"></script>
 </body>
 </html>

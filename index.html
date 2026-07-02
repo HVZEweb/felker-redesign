@@ -44,8 +44,15 @@
     </nav>
 
     <section class="hero">
-        <div class="hero_media">
-            <img src="assets/felker-reference.png" alt="" width="1200" height="600">
+        <div class="hero_carousel" data-hero-carousel aria-roledescription="carousel">
+            <div class="hero_slides"></div>
+            <div class="hero_overlay" aria-hidden="true"></div>
+            <p class="hero_caption" aria-live="polite"></p>
+            <div class="hero_carousel_ui">
+                <button type="button" class="hero_arrow hero_arrow--prev" aria-label="Previous slide">‹</button>
+                <div class="hero_dots"></div>
+                <button type="button" class="hero_arrow hero_arrow--next" aria-label="Next slide">›</button>
+            </div>
         </div>
         <div class="container hero_content">
             <span class="hero_eyebrow">Since 1903 · ISO 9001</span>
@@ -128,6 +135,7 @@
     </footer>
 
     <div class="demo_ribbon">Concept demo — not affiliated with Felker Brothers Corp. · <a href="pitch-one-pager.html">Pitch deck</a></div>
+    <script src="js/hero-carousel.js"></script>
     <script src="js/felker.js"></script>
 </body>
 </html>

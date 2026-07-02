@@ -12,6 +12,17 @@ Standalone pitch demo for [Felker Brothers Corporation](https://www.felkerbrothe
 | `contact.html` | Quote form (demo only) |
 | `pitch-one-pager.html` | Print-ready PDF pitch → **Ctrl+P / Save as PDF** |
 
+## Live
+
+| | URL |
+|---|---|
+| **Demo site** | https://felker-redesign.netlify.app |
+| **Pitch PDF** | https://felker-redesign.netlify.app/pitch-one-pager.html |
+| **GitHub** | https://github.com/HVZEweb/felker-redesign |
+| **Netlify admin** | https://app.netlify.com/projects/felker-redesign |
+
+Auto-deploy: push to `main` on GitHub → Netlify rebuilds.
+
 ## Local preview
 
 Open `index.html` in a browser, or from repo root:
@@ -22,26 +33,22 @@ npx serve felker-pitch
 
 Then visit `http://localhost:3000`.
 
-## Deploy to Netlify (separate project)
+## Deploy (already set up)
 
-1. Create a **new GitHub repo** (e.g. `HVZEweb/felker-redesign`)
-2. Push only this folder:
+Repo: **HVZEweb/felker-redesign** · Site: **felker-redesign.netlify.app**
+
+To redeploy manually from this folder:
 
 ```bash
-cd felker-pitch
-git init
-git add .
-git commit -m "Felker Brothers redesign concept demo"
-git branch -M main
-git remote add origin git@github.com:HVZEweb/felker-redesign.git
-git push -u origin main
+npx netlify-cli deploy --prod --dir=.
 ```
 
-3. In [Netlify](https://app.netlify.com): **Add new site → Import from Git**
-4. Base directory: leave empty if repo root *is* this folder, or set publish directory to `.`
-5. Suggested site name: `felker-redesign` → URL: `https://felker-redesign.netlify.app`
+To clone elsewhere:
 
-After deploy, update `felkerPitchUrl` in the main HVZEweb `js/config.js`.
+```bash
+git clone https://github.com/HVZEweb/felker-redesign.git
+cd felker-redesign
+```
 
 ## Outreach
 

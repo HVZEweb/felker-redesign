@@ -47,23 +47,54 @@
         },
     };
 
+    const page = location.pathname.split('/').pop() || 'index.html';
+    const isHome = page === 'index.html' || page === '';
+
     const burger = document.querySelector('.burger');
     const mobileNav = document.querySelector('.mobile_nav');
     const submenuPanel = document.getElementById('submenu-panel');
     const tabButtons = document.querySelectorAll('[data-tab]');
     const activeTab = document.body.dataset.activeTab || 'piping';
+    let submenuBody = null;
+    let submenuToggle = null;
+
+    if (submenuPanel && !submenuPanel.querySelector('.submenu_body')) {
+        submenuToggle = document.createElement('button');
+        submenuToggle.type = 'button';
+        submenuToggle.className = 'submenu_toggle';
+        submenuToggle.setAttribute('aria-expanded', 'true');
+        submenuToggle.innerHTML = '<span>Division menu</span><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>';
+        submenuBody = document.createElement('div');
+        submenuBody.className = 'submenu_body';
+        submenuPanel.append(submenuToggle, submenuBody);
+        submenuToggle.addEventListener('click', () => {
+            const collapsed = submenuPanel.classList.toggle('is-collapsed');
+            submenuToggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+        });
+    } else if (submenuPanel) {
+        submenuBody = submenuPanel.querySelector('.submenu_body');
+    }
+
+    function linkIsCurrent(href) {
+        const url = new URL(href, location.href);
+        const linkPage = url.pathname.split('/').pop() || 'index.html';
+        if (linkPage !== page && !(linkPage === 'index.html' && isHome)) return false;
+        if (url.hash && location.hash !== url.hash) return false;
+        return true;
+    }
 
     function renderSubmenu(tabKey) {
-        if (!submenuPanel) return;
+        if (!submenuBody) return;
         const menu = SUBMENUS[tabKey] || SUBMENUS.piping;
-        submenuPanel.innerHTML = `
+        submenuBody.innerHTML = `
+            <p class="submenu_hint">Division resources</p>
             <p class="submenu_label">${menu.label}</p>
             <ul class="submenu_list">
                 ${menu.links
-                    .map(
-                        (link) =>
-                            `<li><a href="${link.href}"${link.external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${link.text}</a></li>`
-                    )
+                    .map((link) => {
+                        const current = linkIsCurrent(link.href);
+                        return `<li><a href="${link.href}" class="${current ? 'is-current' : ''}"${link.external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${link.text}</a></li>`;
+                    })
                     .join('')}
             </ul>`;
     }
@@ -76,20 +107,24 @@
         });
         document.body.dataset.activeTab = tabKey;
         renderSubmenu(tabKey);
-        if (pushState && history.replaceState) {
+        if (pushState && history.replaceState && isHome) {
             history.replaceState(null, '', `#${tabKey}`);
         }
     }
 
     tabButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
-            setActiveTab(btn.dataset.tab, true);
-            submenuPanel?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            const tab = btn.dataset.tab;
+            if (!isHome) {
+                location.href = `index.html#${tab}`;
+                return;
+            }
+            setActiveTab(tab, true);
         });
     });
 
     const hashTab = location.hash.replace('#', '');
-    if (SUBMENUS[hashTab]) {
+    if (isHome && SUBMENUS[hashTab]) {
         setActiveTab(hashTab, false);
     } else {
         setActiveTab(activeTab, false);
@@ -98,17 +133,21 @@
     if (burger && mobileNav) {
         burger.addEventListener('click', () => {
             const open = mobileNav.classList.toggle('is-open');
+            burger.classList.toggle('is-open', open);
             burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+            document.body.classList.toggle('menu-open', open);
         });
         mobileNav.querySelectorAll('a').forEach((link) => {
-            link.addEventListener('click', () => mobileNav.classList.remove('is-open'));
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('is-open');
+                burger.classList.remove('is-open');
+                document.body.classList.remove('menu-open');
+            });
         });
     }
 
-    const current = location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.utility_nav a, .mobile_nav a').forEach((link) => {
-        const href = link.getAttribute('href')?.split('#')[0];
-        if (href === current || (current === '' && href === 'index.html')) {
+        if (linkIsCurrent(link.getAttribute('href') || '')) {
             link.classList.add('is-active');
         }
     });

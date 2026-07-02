@@ -21,10 +21,10 @@
                 <a class="site_phone" href="tel:8008262304">800-826-2304</a>
                 <nav class="utility_nav" aria-label="Utility">
                     <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
                     <a href="about.html">About Us</a>
                     <a href="contact.html">Contact</a>
                     <a href="about.html#employment">Employment</a>
-                    <a href="about.html#mission">Mission</a>
                 </nav>
                 <a class="header_cta" href="contact.html#quote">Get Quote</a>
             </div>
@@ -36,9 +36,9 @@
 
     <nav class="mobile_nav" aria-label="Mobile">
         <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact</a>
-        <a href="products.html">Products</a>
         <a href="contact.html#quote">Get Quote</a>
         <a class="site_phone" href="tel:8008262304">800-826-2304</a>
     </nav>
@@ -59,13 +59,34 @@
         </div>
     </section>
 
+    <div class="trust_strip">
+        <div class="container trust_strip_inner">
+            <div class="trust_item">
+                <span class="trust_value">1903</span>
+                <span class="trust_label">Established</span>
+            </div>
+            <div class="trust_item">
+                <span class="trust_value">ISO 9001</span>
+                <span class="trust_label">Certified</span>
+            </div>
+            <div class="trust_item">
+                <span class="trust_value">2</span>
+                <span class="trust_label">US Plants · WI &amp; KY</span>
+            </div>
+            <div class="trust_item">
+                <span class="trust_value">MTR</span>
+                <span class="trust_label">Full traceability</span>
+            </div>
+        </div>
+    </div>
+
     <div class="division_wrap">
         <div class="container">
-            <nav class="division_tabs" aria-label="Product divisions">
-                <button type="button" class="tab_btn is-active" data-tab="piping" aria-selected="true">Piping Products</button>
-                <button type="button" class="tab_btn" data-tab="fabrication" aria-selected="false">Fabrication Products</button>
-                <button type="button" class="tab_btn" data-tab="service" aria-selected="false">Customer Service</button>
-                <button type="button" class="tab_btn" data-tab="news" aria-selected="false">Industry News</button>
+            <nav class="division_tabs" role="tablist" aria-label="Product divisions">
+                <button type="button" class="tab_btn is-active" role="tab" data-tab="piping" aria-selected="true">Piping Products</button>
+                <button type="button" class="tab_btn" role="tab" data-tab="fabrication" aria-selected="false">Fabrication Products</button>
+                <button type="button" class="tab_btn" role="tab" data-tab="service" aria-selected="false">Customer Service</button>
+                <button type="button" class="tab_btn" role="tab" data-tab="news" aria-selected="false">Industry News</button>
             </nav>
         </div>
     </div>
@@ -75,7 +96,10 @@
 
         <main class="content_main">
             <article class="content_card" id="mtr">
-                <h1>Material Test Reports &amp; Paperwork</h1>
+                <div class="card_head">
+                    <span class="card_tag">Documentation</span>
+                    <h1>Material Test Reports &amp; Paperwork</h1>
+                </div>
                 <div class="content_row">
                     <div class="content_icon content_icon--pipes" aria-hidden="true"></div>
                     <div>
@@ -87,7 +111,10 @@
             </article>
 
             <article class="content_card">
-                <h2>Fabricated Piping Systems</h2>
+                <div class="card_head">
+                    <span class="card_tag">Fabrication</span>
+                    <h2>Fabricated Piping Systems</h2>
+                </div>
                 <div class="content_row">
                     <div class="content_icon content_icon--fab" aria-hidden="true"></div>
                     <div>
@@ -98,15 +125,19 @@
             </article>
 
             <article class="content_card" id="hours">
-                <h2>Customer Service Hours</h2>
+                <div class="card_head">
+                    <span class="card_tag">Support</span>
+                    <h2>Customer Service Hours</h2>
+                </div>
                 <p><strong>Monday – Friday:</strong> 7:00 AM – 4:30 PM Central</p>
                 <p>Toll-free <a href="tel:8008262304">800-826-2304</a> · Marshfield <a href="tel:7153843121">715-384-3121</a></p>
                 <p>22 North Chestnut Avenue, Marshfield, WI 54449</p>
-                <a class="btn btn_primary" href="contact.html#quote" style="margin-top:12px">Request a Quote</a>
+                <a class="btn btn_primary" href="contact.html#quote">Request a Quote</a>
             </article>
         </main>
 
         <aside class="portal_panel">
+            <div class="portal_badge">Customer area</div>
             <h2>Pipeline Portal</h2>
             <p class="portal_sub">Registered customers — order status &amp; documents</p>
             <form class="portal_form" data-portal-form action="#" method="post">
@@ -124,6 +155,29 @@
     </div>
 
     <footer class="site_footer">
+        <div class="container footer_grid">
+            <div class="footer_col">
+                <img src="assets/logo.svg" alt="" width="160" height="32" class="footer_logo">
+                <p>Welded stainless steel pipe, tube, fittings and fabricated systems since 1903.</p>
+            </div>
+            <div class="footer_col">
+                <h3>Products</h3>
+                <a href="products.html#piping">Piping Products</a>
+                <a href="products.html#fabrication">Fabrication</a>
+                <a href="products.html">Catalog &amp; PDFs</a>
+            </div>
+            <div class="footer_col">
+                <h3>Company</h3>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html#employment">Employment</a>
+            </div>
+            <div class="footer_col">
+                <h3>Call</h3>
+                <a href="tel:8008262304" class="footer_phone">800-826-2304</a>
+                <a href="contact.html#quote">Request Quote</a>
+            </div>
+        </div>
         <p class="footer_tagline">Your Complete Combination in Stainless Steel Piping Products</p>
         <p class="footer_copy">© Felker Brothers Corporation · Concept redesign by <a href="https://hvzeweb.netlify.app" target="_blank" rel="noopener">HVZEweb</a></p>
     </footer>

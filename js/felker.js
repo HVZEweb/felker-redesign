@@ -83,20 +83,31 @@
         return true;
     }
 
+    const TAB_CODES = { piping: 'PP', fabrication: 'FB', service: 'CS', news: 'IN' };
+
     function renderSubmenu(tabKey) {
         if (!submenuBody) return;
         const menu = SUBMENUS[tabKey] || SUBMENUS.piping;
+        const code = TAB_CODES[tabKey] || 'PP';
         submenuBody.innerHTML = `
-            <p class="submenu_hint">Division resources</p>
-            <p class="submenu_label">${menu.label}</p>
+            <div class="submenu_header">
+                <span class="submenu_code">${code}</span>
+                <div>
+                    <p class="submenu_hint">Division resources</p>
+                    <p class="submenu_label">${menu.label}</p>
+                </div>
+            </div>
             <ul class="submenu_list">
                 ${menu.links
-                    .map((link) => {
+                    .map((link, i) => {
+                        const num = String(i + 1).padStart(2, '0');
                         const current = linkIsCurrent(link.href);
-                        return `<li><a href="${link.href}" class="${current ? 'is-current' : ''}"${link.external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${link.text}</a></li>`;
+                        const ext = link.external ? '<span class="submenu_ext" aria-hidden="true">↗</span>' : '';
+                        return `<li><a href="${link.href}" class="${current ? 'is-current' : ''}"${link.external ? ' target="_blank" rel="noopener noreferrer"' : ''}><span class="submenu_num">${num}</span><span class="submenu_text">${link.text}</span>${ext}</a></li>`;
                     })
                     .join('')}
-            </ul>`;
+            </ul>
+            <div class="submenu_footer" aria-hidden="true"></div>`;
     }
 
     function setActiveTab(tabKey, pushState) {

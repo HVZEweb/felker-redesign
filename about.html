@@ -46,12 +46,14 @@
     </section>
 
     <div class="division_wrap">
+        <div class="division_hazard" aria-hidden="true"></div>
         <div class="container">
-            <nav class="division_tabs" aria-label="Product divisions">
-                <button type="button" class="tab_btn" data-tab="piping">Piping Products</button>
-                <button type="button" class="tab_btn" data-tab="fabrication">Fabrication Products</button>
-                <button type="button" class="tab_btn" data-tab="service">Customer Service</button>
-                <button type="button" class="tab_btn is-active" data-tab="news">Industry News</button>
+            <p class="division_label">Product divisions</p>
+            <nav class="division_tabs" role="tablist" aria-label="Product divisions">
+                <button type="button" class="tab_btn" role="tab" data-tab="piping"><span class="tab_num">01</span><span class="tab_text">Piping Products</span></button>
+                <button type="button" class="tab_btn" role="tab" data-tab="fabrication"><span class="tab_num">02</span><span class="tab_text">Fabrication Products</span></button>
+                <button type="button" class="tab_btn" role="tab" data-tab="service"><span class="tab_num">03</span><span class="tab_text">Customer Service</span></button>
+                <button type="button" class="tab_btn is-active" role="tab" data-tab="news"><span class="tab_num">04</span><span class="tab_text">Industry News</span></button>
             </nav>
         </div>
     </div>

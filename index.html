@@ -10,26 +10,23 @@
     <link rel="stylesheet" href="css/felker.css">
 </head>
 <body data-active-tab="piping">
-    <div class="site_bg" aria-hidden="true"></div>
+    <div class="blueprint_bg" aria-hidden="true"></div>
 
     <header class="site_header">
         <div class="container site_header_row">
             <a class="site_logo" href="index.html">
-                <img src="assets/logo.svg" alt="Felker Bros. Corp." width="260" height="42">
+                <img src="assets/logo.svg" alt="Felker Bros. Corp." width="200" height="40">
             </a>
             <div class="site_header_right">
                 <a class="site_phone" href="tel:8008262304">800-826-2304</a>
                 <nav class="utility_nav" aria-label="Utility">
                     <a href="index.html">Home</a>
-                    <span class="utility_sep">|</span>
                     <a href="about.html">About Us</a>
-                    <span class="utility_sep">|</span>
                     <a href="contact.html">Contact</a>
-                    <span class="utility_sep">|</span>
                     <a href="about.html#employment">Employment</a>
-                    <span class="utility_sep">|</span>
                     <a href="about.html#mission">Mission</a>
                 </nav>
+                <a class="header_cta" href="contact.html#quote">Get Quote</a>
             </div>
             <button class="burger" type="button" aria-label="Menu" aria-expanded="false">
                 <span></span><span></span><span></span>
@@ -42,102 +39,95 @@
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact</a>
         <a href="products.html">Products</a>
-        <a href="about.html#employment">Employment</a>
-        <a href="about.html#mission">Mission</a>
+        <a href="contact.html#quote">Get Quote</a>
         <a class="site_phone" href="tel:8008262304">800-826-2304</a>
     </nav>
 
-    <div class="hero_banner">
-        <img src="assets/felker-reference.png" alt="Stainless steel pipe secured on flatbed trailer" width="980" height="200">
-        <span class="hero_banner_caption">Dunnage</span>
+    <section class="hero">
+        <div class="hero_media">
+            <img src="assets/felker-reference.png" alt="" width="1200" height="600">
+        </div>
+        <div class="container hero_content">
+            <span class="hero_eyebrow">Since 1903 · ISO 9001</span>
+            <h1 class="hero_title">Your complete combination in <em>stainless steel</em> piping</h1>
+            <p class="hero_text">Welded pipe, tube, fittings and fabricated systems for food, dairy, pharmaceutical, chemical and industrial process applications.</p>
+            <div class="hero_actions">
+                <a class="btn btn_primary" href="contact.html#quote">Request a Quote</a>
+                <a class="btn btn_ghost" href="products.html">Browse Products</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="division_wrap">
+        <div class="container">
+            <nav class="division_tabs" aria-label="Product divisions">
+                <button type="button" class="tab_btn is-active" data-tab="piping" aria-selected="true">Piping Products</button>
+                <button type="button" class="tab_btn" data-tab="fabrication" aria-selected="false">Fabrication Products</button>
+                <button type="button" class="tab_btn" data-tab="service" aria-selected="false">Customer Service</button>
+                <button type="button" class="tab_btn" data-tab="news" aria-selected="false">Industry News</button>
+            </nav>
+        </div>
     </div>
 
-    <nav class="tab_nav" aria-label="Product divisions">
-        <div class="container tab_nav_inner">
-            <button type="button" class="tab_btn is-active" data-tab="piping" aria-selected="true">Piping Products</button>
-            <button type="button" class="tab_btn" data-tab="fabrication" aria-selected="false">Fabrication Products</button>
-            <button type="button" class="tab_btn" data-tab="service" aria-selected="false">Customer Service</button>
-            <button type="button" class="tab_btn" data-tab="news" aria-selected="false">Industry News</button>
-        </div>
-    </nav>
-
-    <div class="container content_layout">
+    <div class="container page_grid">
         <aside class="submenu_panel" id="submenu-panel" aria-label="Section menu"></aside>
 
         <main class="content_main">
-            <article class="content_block" id="mtr">
-                <h1>Material Test Reports (MTRs) and Other Paperwork</h1>
-                <div class="content_split">
-                    <div class="content_thumb" aria-hidden="true">
-                        <div class="thumb_pipes"></div>
-                    </div>
+            <article class="content_card" id="mtr">
+                <h1>Material Test Reports &amp; Paperwork</h1>
+                <div class="content_row">
+                    <div class="content_icon content_icon--pipes" aria-hidden="true"></div>
                     <div>
-                        <p>Need a copy of your paperwork? Send an email to <a href="mailto:paperwork@felkerbrothers.com">paperwork@felkerbrothers.com</a> with your PO number and we will respond promptly.</p>
-                        <p>ISO 9001 documentation, material traceability and certification packages are available for all standard and fabricated products.</p>
+                        <p>Need MTRs or certification copies? Email <a href="mailto:paperwork@felkerbrothers.com">paperwork@felkerbrothers.com</a> with your PO number — we respond promptly.</p>
+                        <p>ISO 9001 documentation and full material traceability available on all standard and fabricated products.</p>
                         <a class="text_link" href="about.html#certifications">View certifications →</a>
                     </div>
                 </div>
             </article>
 
-            <article class="content_block">
+            <article class="content_card">
                 <h2>Fabricated Piping Systems</h2>
-                <div class="content_split">
-                    <div class="content_thumb" aria-hidden="true">
-                        <div class="thumb_fabrication"></div>
-                    </div>
+                <div class="content_row">
+                    <div class="content_icon content_icon--fab" aria-hidden="true"></div>
                     <div>
-                        <p>Felker Fabrication builds custom spool assemblies and complete piping systems to your drawings — welded in Wisconsin and Kentucky facilities.</p>
-                        <a class="text_link" href="products.html#fabrication">Fabrication products →</a>
+                        <p>Custom spool assemblies and complete piping systems built to your drawings — welded at our Wisconsin and Kentucky facilities.</p>
+                        <a class="text_link" href="products.html#fabrication">Explore fabrication →</a>
                     </div>
                 </div>
             </article>
 
-            <article class="content_block" id="hours">
-                <h2>Office Hours for Customer Service</h2>
-                <p><strong>Monday – Friday:</strong> 7:00 AM – 4:30 PM Central<br>
-                <strong>Toll-free:</strong> <a href="tel:8008262304">800-826-2304</a> · <strong>Marshfield:</strong> <a href="tel:7153843121">715-384-3121</a></p>
+            <article class="content_card" id="hours">
+                <h2>Customer Service Hours</h2>
+                <p><strong>Monday – Friday:</strong> 7:00 AM – 4:30 PM Central</p>
+                <p>Toll-free <a href="tel:8008262304">800-826-2304</a> · Marshfield <a href="tel:7153843121">715-384-3121</a></p>
                 <p>22 North Chestnut Avenue, Marshfield, WI 54449</p>
-                <a class="btn_go" href="contact.html#quote">Request a Quote</a>
+                <a class="btn btn_primary" href="contact.html#quote" style="margin-top:12px">Request a Quote</a>
             </article>
         </main>
 
         <aside class="portal_panel">
-            <div class="portal_header">
-                <div class="portal_header_icon" aria-hidden="true"></div>
-                <h2>Pipeline Portal</h2>
-            </div>
+            <h2>Pipeline Portal</h2>
+            <p class="portal_sub">Registered customers — order status &amp; documents</p>
             <form class="portal_form" data-portal-form action="#" method="post">
-                <label>
-                    User Name
-                    <input type="text" name="username" autocomplete="username">
-                </label>
-                <label>
-                    Password
-                    <input type="password" name="password" autocomplete="current-password">
-                </label>
-                <label class="portal_remember">
-                    <input type="checkbox" name="remember"> Remember me
-                </label>
-                <button type="submit" class="btn_portal_go">GO</button>
+                <label>User Name<input type="text" name="username" autocomplete="username"></label>
+                <label>Password<input type="password" name="password" autocomplete="current-password"></label>
+                <label class="portal_remember"><input type="checkbox" name="remember"> Remember me</label>
+                <button type="submit" class="btn_portal">Sign In</button>
             </form>
             <p class="portal_links">
-                <a href="https://www.felkerbrothers.com/pipeline-portal.aspx" target="_blank" rel="noopener">Forgot Password</a>
-                ·
-                <a href="contact.html">New User</a>
+                <a href="https://www.felkerbrothers.com/pipeline-portal.aspx" target="_blank" rel="noopener">Forgot password</a>
+                · <a href="contact.html">New user</a>
             </p>
-            <p class="portal_note">Live login at <a href="https://www.felkerbrothers.com/pipeline-portal.aspx" target="_blank" rel="noopener">felkerbrothers.com</a></p>
+            <p class="portal_note">Live portal at <a href="https://www.felkerbrothers.com/pipeline-portal.aspx" target="_blank" rel="noopener">felkerbrothers.com</a></p>
         </aside>
     </div>
 
     <footer class="site_footer">
         <p class="footer_tagline">Your Complete Combination in Stainless Steel Piping Products</p>
-        <p class="footer_copy">Copyright © Felker Brothers Corporation · Concept redesign by <a href="https://hvzeweb.netlify.app" target="_blank" rel="noopener">HVZEweb</a></p>
+        <p class="footer_copy">© Felker Brothers Corporation · Concept redesign by <a href="https://hvzeweb.netlify.app" target="_blank" rel="noopener">HVZEweb</a></p>
     </footer>
 
-    <div class="demo_ribbon">
-        Concept redesign demo — not affiliated with Felker Brothers Corp. · <a href="pitch-one-pager.html">View pitch deck</a>
-    </div>
-
+    <div class="demo_ribbon">Concept demo — not affiliated with Felker Brothers Corp. · <a href="pitch-one-pager.html">Pitch deck</a></div>
     <script src="js/felker.js"></script>
 </body>
 </html>

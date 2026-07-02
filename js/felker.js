@@ -57,7 +57,7 @@
         if (!submenuPanel) return;
         const menu = SUBMENUS[tabKey] || SUBMENUS.piping;
         submenuPanel.innerHTML = `
-            <p class="submenu_title">${menu.label}</p>
+            <p class="submenu_label">${menu.label}</p>
             <ul class="submenu_list">
                 ${menu.links
                     .map(

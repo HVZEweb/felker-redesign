@@ -14,8 +14,9 @@ Standalone pitch demo for [Felker Brothers Corporation](https://www.felkerbrothe
 
 ## Live demo
 
-- **Site:** https://felker-redesign.netlify.app
-- **Pitch PDF page:** https://felker-redesign.netlify.app/pitch-one-pager.html
+- **Site (GitHub Pages):** https://hvzeweb.github.io/felker-redesign/
+- **Pitch PDF page:** https://hvzeweb.github.io/felker-redesign/pitch-one-pager.html
+- **Netlify (fallback):** https://felker-redesign.netlify.app
 
 ## Local preview
 

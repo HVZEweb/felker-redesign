@@ -1,0 +1,29 @@
+Subject: Website concept for Felker Brothers — live demo attached (no obligation)
+
+Hello,
+
+My name is [Your Name] from HVZEweb, a web studio focused on B2B and industrial brands.
+
+I'm reaching out because Felker Brothers has built a reputation since 1903 for quality stainless piping — but your public website (still on HTTP with a 2006-era product catalog flow) doesn't reflect that standard for first-time buyers, especially on mobile.
+
+We didn't wait for an RFP. We invested our own time and built a Phase 1 redesign concept for you:
+
+Live demo: https://hvzeweb.github.io/felker-redesign/
+(Homepage, products hub, contact/quote flow — Pipeline Portal link preserved)
+
+Attached: one-page PDF proposal with scope, timeline, and fixed Phase 1 estimate ($2,800–$4,200 USD).
+
+What we focused on:
+- Clear paths for RFQs and product divisions (Piping / Fabrication)
+- Mobile-first layout for engineers and purchasing on-site
+- Your ISO 9001 story and certifications up front
+- No ERP or portal rebuild — low-risk rollout in ~4 weeks
+
+This is an unsolicited concept — not affiliated with Felker Brothers Corp. If it's not useful, no reply needed. If it resonates, I'd welcome 15 minutes to walk through the demo and hear whether a Phase 1 refresh is on your roadmap.
+
+Best regards,
+[Your Name]
+HVZEweb
+hvzeweb@mail.ru
+https://hvzeweb.netlify.app
+Telegram: @HVZEweb

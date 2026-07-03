@@ -240,15 +240,68 @@
 
         @media print {
             body { background: #fff; }
-            .page { margin: 0; box-shadow: none; width: auto; min-height: auto; }
+            .page { margin: 0; box-shadow: none; width: auto; min-height: auto; page-break-after: avoid; }
             .toolbar { display: none; }
+            a { color: var(--ink); text-decoration: none; }
         }
+
+        @page {
+            size: A4;
+            margin: 12mm;
+        }
+
+        .demo_shot {
+            width: 100%;
+            height: 88px;
+            object-fit: cover;
+            object-position: top center;
+            border-radius: 4px;
+            border: 1px solid var(--line);
+            margin-bottom: 10px;
+        }
+
+        .proof_row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .proof_item {
+            text-align: center;
+            padding: 10px 8px;
+            background: #f8fafc;
+            border-radius: 6px;
+            border: 1px solid var(--line);
+        }
+
+        .proof_item strong {
+            display: block;
+            font-size: 14pt;
+            color: var(--accent);
+            line-height: 1.1;
+        }
+
+        .proof_item span {
+            font-size: 8pt;
+            color: var(--muted);
+        }
+
+        .next_step {
+            padding: 12px 14px;
+            border: 1px dashed var(--accent);
+            border-radius: 6px;
+            background: #fff7ed;
+            font-size: 9.5pt;
+        }
+
+        .next_step strong { color: var(--accent); }
     </style>
 </head>
 <body>
     <div class="toolbar">
         <button type="button" onclick="window.print()">Save as PDF (Print)</button>
-        <a href="index.html">Open live concept demo →</a>
+        <a href="https://hvzeweb.github.io/felker-redesign/">Open live concept demo →</a>
     </div>
 
     <article class="page">
@@ -262,7 +315,14 @@
         </header>
 
         <h1>Your website should match the quality of your stainless products</h1>
-        <p class="subtitle">A focused Phase 1 redesign to modernize Felker Brothers' digital presence — without changing who you are.</p>
+        <p class="subtitle">Phase 1 redesign concept — already built as a working demo. Modern first impression for engineers, distributors, and new RFQs. Pipeline Portal stays as-is.</p>
+
+        <div class="proof_row">
+            <div class="proof_item"><strong>1903</strong><span>Heritage preserved</span></div>
+            <div class="proof_item"><strong>ISO 9001</strong><span>Trust up front</span></div>
+            <div class="proof_item"><strong>~4 wks</strong><span>Phase 1 launch</span></div>
+            <div class="proof_item"><strong>$2.8–4.2k</strong><span>Fixed scope USD</span></div>
+        </div>
 
         <div class="grid-2">
             <div class="box before">
@@ -276,11 +336,11 @@
                 </ul>
             </div>
             <div class="box after">
-                <h2>Proposed (concept built)</h2>
-                <div class="preview new" aria-hidden="true"></div>
+                <h2>Proposed (live demo)</h2>
+                <img class="demo_shot" src="assets/finalfelker3b.jpg" alt="Concept homepage preview">
                 <ul>
-                    <li>HTTPS, clean industrial brand, mobile-first</li>
-                    <li>Product hub with clear paths + PDF downloads kept</li>
+                    <li>HTTPS-ready layout, clean industrial brand, mobile-first</li>
+                    <li>Product hub with clear paths + your PDF catalogs kept</li>
                     <li>Prominent quote CTA and division structure</li>
                     <li>Pipeline Portal preserved for existing customers</li>
                 </ul>
@@ -333,13 +393,16 @@
                     </tr>
                     <tr>
                         <td><strong>Launch</strong></td>
-                        <td>HTTPS, analytics, basic SEO, Netlify/hosting setup</td>
+                        <td>HTTPS, analytics, basic SEO, hosting &amp; handoff</td>
                         <td>Week 4</td>
                     </tr>
                 </tbody>
             </table>
             <p style="margin-top:10px;font-size:10pt;color:var(--muted);">
                 <strong>Phase 1 estimate:</strong> $2,800 – $4,200 USD (fixed scope) · Optional Phase 2: full catalog migration, CMS, multilingual.
+            </p>
+            <p class="next_step" style="margin-top:12px;">
+                <strong>Next step:</strong> Open the demo (2 minutes) → reply for a 15-minute walkthrough. No RFP required to evaluate the concept.
             </p>
         </section>
 
@@ -350,9 +413,10 @@
                     <span>No obligation — we invested time because your brand deserves a better first impression.</span>
                 </div>
                 <div class="cta_links">
-                    Demo: <a href="index.html">Open concept site</a><br>
+                    Demo:<br>
+                    <a href="https://hvzeweb.github.io/felker-redesign/">hvzeweb.github.io/felker-redesign</a><br>
                     Email: hvzeweb@mail.ru<br>
-                    Telegram: @HVZEweb
+                    Studio: hvzeweb.netlify.app
                 </div>
             </div>
         </section>
